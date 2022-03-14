@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>README.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><em>#Page linked to the <a href="https://github.com/tikitong/geonetwork">tikitong/geonetwork</a> repository</em></p>
+<p>This feature is intended to link point pattern recognition by deep learning with network creation. It requires the installation of specific libraries with <code>pip install -r requirements.txt</code></p>
+<p>From data, simple geodesic coordinates (points) or bounding-boxes (polygons), a network of nodes and edges is created based on the search for the  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="0.8em"><mi>k</mi></mstyle></mrow><annotation encoding="application/x-tex">\footnotesize k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.555552em; vertical-align: 0em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right: 0.03148em;">k</span></span></span></span></span>  nearest neighbours.</p>
+<p>You can visited the <a href="https://github.com/tikitong/geonetwork/blob/main/network.py">network.py</a> file.</p>
+<p><em><strong>nodes.geojson</strong></em> and <em><strong>edges.geojson</strong></em> files are generated.</p>
+<p>Each node has the following metadata:</p>
+<ol>
+<li><code>nodeID</code>  its ID number in the network.</li>
+<li><code>label</code>  its label.</li>
+<li><code>degree</code>  its number of connections.</li>
+<li><code>neighbors</code>  the ID of its connected neighbours and their labels.</li>
+<li><code>closeness</code>  a value reflecting its centralization in the network.</li>
+</ol>
+<p>Each edge has the following metadata:</p>
+<ol>
+<li><code>node_start</code>  the ID number of the starting node.</li>
+<li><code>node_end</code>  the ID number of its ending node.</li>
+<li><code>mm_len</code>  the distance between the two nodes in  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="0.8em"><mi>k</mi><mi>m</mi></mstyle></mrow><annotation encoding="application/x-tex">\footnotesize km</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.555552em; vertical-align: 0em;"></span><span class="mord mathnormal sizing reset-size6 size4">km</span></span></span></span></span>.</li>
+</ol>
+<p>The code is generalised, we can choose the number of  \footnotesize k  nearest neighbours, obtain a network by label or a simply a  <em>linked</em>  network. The visualization of the network can also be done on  <a href="https://kepler.gl/">kepler.gl</a>  or any other GIS.</p>
+<p>Here is an example of a generated map with a public dataset for the search of the two nearest neighbors. the dataset comes from the google community <a href="https://googleearthcommunity.proboards.com/thread/883/neolithic-sites-arabia-africa-kengrok">forum</a> and is provided by a user called KenGrok. It contains 2679 unsorted hand-collected archaeological structures in the Arabian Peninsula and eastern Africa. Please click on a node and an edge to see the information displayed.</p>
+<iframe width="750" height="600" src="kepler.gl.html"></iframe>
+<p><strong>This is interesting because we can now build and visualise the archaeological geometry of the country.</strong></p>
+<p>Thanks to this network we can establish correlations between the localized structures such as, in our case:</p>
+<ul>
+<li>if we have an artefact of type  <em>bullseye</em>  there is a 70% chance that its nearest neighbour is a  <em>triangle</em>  .</li>
+<li>if you have an artefact of type  <em>gate</em>  there is a 96% chance that in a window of 10<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="0.8em"><mi>k</mi><msup><mi>m</mi><mn>2</mn></msup></mstyle></mrow><annotation encoding="application/x-tex">\footnotesize km^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.731464em; vertical-align: 0em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right: 0.03148em;">k</span><span class="mord sizing reset-size6 size4"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.91433em;"><span class="" style="top: -3.031em; margin-right: 0.0625em;"><span class="pstrut" style="height: 2.6em;"></span><span class="sizing reset-size4 size2 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span>  you will find at least one  <em>gate</em>  .</li>
+</ul>
+<p>These correlations are fictitious and depend on the data in the file used to generate the network.</p>
+<p>Now imagine having these kinds of statistics for an entire territory like Saudi Arabia.</p>
+</div>
+</body>
+
+</html>
