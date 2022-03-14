@@ -17,7 +17,7 @@
 <p>Each node has the following metadata:</p>
 <ol>
 <li><code>nodeID</code>  its ID number in the network.</li>
-<li><code>label</code>  its label.</li>
+<li><code>label</code>  its name.</li>
 <li><code>degree</code>  its number of connections.</li>
 <li><code>neighbors</code>  the ID of its connected neighbours and their labels.</li>
 <li><code>closeness</code>  a value reflecting its centralization in the network.</li>
@@ -29,7 +29,9 @@
 <li><code>mm_len</code>  the distance between the two nodes in  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="0.8em"><mi>k</mi><mi>m</mi></mstyle></mrow><annotation encoding="application/x-tex">\footnotesize km</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.555552em; vertical-align: 0em;"></span><span class="mord mathnormal sizing reset-size6 size4">km</span></span></span></span></span>.</li>
 </ol>
 <p>The code is generalised, we can choose the number of  \footnotesize k  nearest neighbours, obtain a network by label or a simply a  <em>linked</em>  network. The visualization of the network can also be done on  <a href="https://kepler.gl/">kepler.gl</a>  or any other GIS.</p>
-<p>Here is an example of a generated map with a public dataset for the search of the two nearest neighbors. the dataset comes from the google community <a href="https://googleearthcommunity.proboards.com/thread/883/neolithic-sites-arabia-africa-kengrok">forum</a> and is provided by a user called KenGrok. It contains 2679 unsorted hand-collected archaeological structures in the Arabian Peninsula and eastern Africa. Please click on a node and an edge to see the information displayed.</p>
+<p>Here is an example of a generated map with a public dataset for the search of the two nearest neighbors.</p>
+<p>The dataset comes from the google community <a href="https://googleearthcommunity.proboards.com/thread/883/neolithic-sites-arabia-africa-kengrok">forum</a> and is provided by a user called KenGrok. It contains 2679 unsorted hand-collected archaeological structures in the Arabian Peninsula and eastern Africa. Such as <em>kite</em>, <em>gate</em> or <em>bullseye</em>.</p>
+<p>Please click on a node and an edge to see the information displayed.</p>
 <iframe width="750" height="600" src="kepler.gl.html"></iframe>
 <p><strong>This is interesting because we can now build and visualise the archaeological geometry of the country.</strong></p>
 <p>Thanks to this network we can establish correlations between the localized structures such as, in our case:</p>
