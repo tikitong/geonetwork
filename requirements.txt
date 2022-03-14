@@ -1,0 +1,7 @@
+shapely==1.7.1
+pointpats==2.2.0
+pandas==1.2.0
+numpy==1.19.4
+networkx==2.5
+momepy==0.4.4
+geopandas==0.9.0
