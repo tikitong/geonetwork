@@ -3,4 +3,4 @@ K-nearest neighbor network creator for the generation of statistics from geograp
 
 This repository is not currently related to AI methods, it focuses on generating graphs and statistics from geographic data. With an applied case for archaeological structures.  
 
-Please visit this link for an in-depth explanation and an interactive example.
+Please visit [this link](https://tikitong.github.io/geonetwork/) for an in-depth explanation and an interactive example.
