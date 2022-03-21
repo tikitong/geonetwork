@@ -4,16 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>README.md</title>
+  <title>geonetwork</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
 
 <body class="stackedit">
   <div class="stackedit__html"><p><em>#Page linked to the <a href="https://github.com/tikitong/geonetwork">tikitong/geonetwork</a> repository</em></p>
 <p>This feature is intended to link point pattern recognition by deep learning with network creation. It requires the installation of specific libraries with <code>pip install -r requirements.txt</code></p>
-<p>From data, simple geodesic coordinates (points) or bounding-boxes (polygons), a network of nodes and edges is created based on the search for the  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="0.8em"><mi>k</mi></mstyle></mrow><annotation encoding="application/x-tex">\footnotesize k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.555552em; vertical-align: 0em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right: 0.03148em;">k</span></span></span></span></span>  nearest neighbours.</p>
-<p>You can visited the <a href="https://github.com/tikitong/geonetwork/blob/main/network.py">network.py</a> file.</p>
-<p><em><strong>nodes.geojson</strong></em> and <em><strong>edges.geojson</strong></em> files are generated.</p>
+<p>From geospatial data (Points or Polygons) a network with nodes and edges is created based on the search for the  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="0.8em"><mi>k</mi></mstyle></mrow><annotation encoding="application/x-tex">\footnotesize k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.555552em; vertical-align: 0em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right: 0.03148em;">k</span></span></span></span></span>  nearest neighbours.</p>
+<p>You can visited the <a href="https://github.com/tikitong/geonetwork/blob/main/network.py">network.py</a> file, change your geojson file name in the <code>make_network</code> function and run <code>python network.py</code></p>
+<p>Two files are generated:</p>
+<ul>
+<li>nodes.geojson</li>
+<li>edges.geojson</li>
+</ul>
 <p>Each node has the following metadata:</p>
 <ol>
 <li><code>nodeID</code>  its ID number in the network.</li>
